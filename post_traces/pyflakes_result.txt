@@ -1,0 +1,2 @@
+This file remains empty because there is no suggestion by pyflakes which means that the code is 
+in accordance with pyflakes
