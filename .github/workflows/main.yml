@@ -19,3 +19,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.12'
+
+    - name: Run AutoPep8
+      run: |
+        autopep8 --in-place --aggressive --aggressive *.py
+
+    - name: Run Flake8
+      run: |
+        flake8 *.py
