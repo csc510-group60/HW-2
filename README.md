@@ -1,7 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Platform](https://img.shields.io/badge/platform-linux-yellow)
-[![test_python](https://github.com/csc510-group60/hw2/actions/workflows/python_ci.yml/badge.svg)](https://github.com/csc510-group60/hw2/actions/workflows/python_ci.yml)
+[![test_python](https://github.com/csc510-group60/hw2/actions/workflows/main.yml/badge.svg)](https://github.com/csc510-group60/hw2/actions/workflows/main.yml)
 ![flake8](https://img.shields.io/badge/flake8-%E2%9C%94-green)
 ![pylint](https://img.shields.io/badge/pylint-%E2%9C%94-green)
 ![AutoPEP8](https://img.shields.io/badge/code%20style-autopep8-blue)
