@@ -1,6 +1,6 @@
 """This module utilizes the subprocess.run
 function in order to generate
-random arrays."""
+random arrays within a given range"""
 import subprocess
 
 
