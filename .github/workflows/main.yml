@@ -1,0 +1,21 @@
+name: Test HW2
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # This step checksout latest code
+    steps:
+    - uses: actions/checkout@v2
+
+    #This action setsup python
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
