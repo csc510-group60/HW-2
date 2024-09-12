@@ -8,7 +8,7 @@ from rand import random_array
 
 def merge_sort(arr):
     """
-    Sorts an input array using the merge sort algorithm by
+    Sort an input array using the merge sort algorithm by
     recursively dividing
     and recombining the array.
 
