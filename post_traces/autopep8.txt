@@ -1,0 +1,3 @@
+Since there are no recommendations by autopep8 so this file was empty
+
+Command = autopep8 --aggressive --aggressive --diff /Users/prabhudattamishra/Downloads/hw2/hw2_debugging.py >  /Users/prabhudattamishra/Downloads/hw2/post_traces/autopep8.txt
