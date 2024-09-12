@@ -29,9 +29,9 @@ jobs:
       run: |
         autopep8 --in-place --aggressive --aggressive *.py
 
-    - name: Run Flake8
+    - name: Run Pyflakes
       run: |
-        flake8 *.py
+        pyflakes *.py
     
     - name: Run Pylint
       run: |
