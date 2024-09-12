@@ -37,3 +37,7 @@ jobs:
       run: |
         pylint *.py
 
+    - name: Run Pytest
+      run: |
+        pytest tests.py
+
