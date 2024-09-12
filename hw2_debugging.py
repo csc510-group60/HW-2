@@ -1,6 +1,6 @@
 """This module imports random_array function from rand.py and uses it to
 generate, sort a random array in ascending order using the
-merge sort algorithm.
+mergesort algorithm.
 """
 
 from rand import random_array
