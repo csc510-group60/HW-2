@@ -33,7 +33,7 @@ jobs:
       run: |
         flake8 *.py
     
-        - name: Run Pylint
+    - name: Run Pylint
       run: |
         pylint *.py
 
