@@ -1,4 +1,4 @@
-name: Test HW2
+name: Test and Lint HW2
 
 on:
   push:
@@ -7,14 +7,11 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
-    # This step checksout latest code
     steps:
     - uses: actions/checkout@v2
 
-    #This action setsup python
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -25,19 +22,44 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run AutoPep8
+    - name: Run tests
+      run: |
+        pytest tests.py
+
+  pyflakes:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+    - name: Run Pyflakes
+      run: |
+        pyflakes .
+
+  pylint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+    - name: Run Pylint
+      run: |
+        pylint *.py --exit-zero
+
+  autopep8:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+    - name: Run AutoPEP8
       run: |
         autopep8 --in-place --aggressive --aggressive *.py
 
-    - name: Run Pyflakes
-      run: |
-        pyflakes *.py
-    
-    - name: Run Pylint
-      run: |
-        pylint *.py
-
-    - name: Run Pytest
-      run: |
-        pytest tests.py
 
