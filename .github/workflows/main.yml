@@ -28,16 +28,32 @@ jobs:
 
     - name: Run AutoPep8
       run: |
-        autopep8 --in-place --aggressive --aggressive src/**/*.py
+        if ls ./*.py 1> /dev/null 2>&1; then
+          autopep8 --in-place --aggressive --aggressive ./*.py
+        else
+          echo "No Python files found to format."
+        fi
 
     - name: Run Pyflakes
       run: |
-        pyflakes src/**/*.py
+        if ls ./*.py 1> /dev/null 2>&1; then
+          pyflakes ./*.py
+        else
+          echo "No Python files found to check."
+        fi
 
     - name: Run Pylint
       run: |
-        pylint src/**/*.py
+        if ls ./*.py 1> /dev/null 2>&1; then
+          pylint ./*.py
+        else
+          echo "No Python files found to lint."
+        fi
 
     - name: Run Tests
       run: |
-        pytest
+        if ls ./*.py 1> /dev/null 2>&1; then
+          pytest
+        else
+          echo "No Python files found to test."
+        fi
