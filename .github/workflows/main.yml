@@ -52,8 +52,8 @@ jobs:
 
     - name: Run Tests
       run: |
-        if ls ./*.py 1> /dev/null 2>&1; then
+        if ls ./*.py 1> /dev/null 2>&1 && grep -q "def test_" ./*.py; then
           pytest
         else
-          echo "No Python files found to test."
+          echo "No test cases found to execute."
         fi
